@@ -39,22 +39,22 @@ if [ -e /usr/local/bin/mero-cli ] && [ -e /usr/local/bin/merod ]; then
 
 	if [ -e /usr/local/bin/mero-cli ]; then
 		echo "Removing mero-cli"
-		rm mero-cli /usr/local/bin
+		rm /usr/local/bin/mero-cli
 	fi
 
 	if [ -e /usr/local/bin/merod ]; then
 		echo "Removing merod"
-		rm merod /usr/local/bin
+		rm  /usr/local/bin/merod
 	fi
 
 	if [ -e /usr/local/bin/mero-qt ]; then
 		echo "Removing mero-qt"
-		rm mero-qt /usr/local/bin
+		rm /usr/local/bin/mero-qt
 	fi
 
     	if [ -e /usr/local/bin/mero-tx ]; then
 		echo "Removing mero-tx"
-		rm mero-tx /usr/local/bin
+		rm /usr/local/bin/mero-tx
 	fi
 
 	
@@ -104,8 +104,7 @@ wget $COIN_REPO
 if test -e "$COIN_ZIP"; then
     tar xvzf $COIN_ZIP
     rm -f $COIN_ZIP >/dev/null 2>&1
-    cp mero* /usr/local/bin
-    compile_error
+    cp /bin/mero* /usr/local/bin
     cd -
     rm -rf $TMP_FOLDER >/dev/null 2>&1
     clear
