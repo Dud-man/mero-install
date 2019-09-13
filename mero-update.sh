@@ -106,7 +106,7 @@ if test -e "$COIN_ZIP"; then
     rm -f $COIN_ZIP >/dev/null 2>&1
     cp /mero-1.2.0/bin/mero* /usr/local/bin
     cd -
-    rm -rf $TMP_FOLDER >/dev/null 2>&1
+    ##rm -rf $TMP_FOLDER >/dev/null 2>&1
     clear
 else
 	echo "There was a problem downloading the binaries, please try running again the script."
