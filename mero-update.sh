@@ -2,9 +2,9 @@ CONFIG_FILE='mero.conf'
 CONFIGFOLDER='/root/.mero'
 COIN_DAEMON='/usr/local/bin/merod'
 COIN_CLI='/usr/local/bin/mero-cli'
-COIN_REPO='https://github.com/MeroCoin/mero/releases/download/v1.2.0/mero-1.2.0-x86_64-linux-gnu.tar.gz'
+COIN_REPO='https://github.com/Dud-man/mero/releases/tag/v2.0/mero-2.0.0-x86_64-linux-gnu.tar.gz'
 COIN_NAME='MeroCoin'
-COIN_ZIP='mero-1.2.0-x86_64-linux-gnu.tar.gz'
+COIN_ZIP='mero-2.0.0-x86_64-linux-gnu.tar.gz'
 COIN_PORT=14550
 
 if [ -e /usr/local/bin/mero-cli ] && [ -e /usr/local/bin/merod ]; then
@@ -104,7 +104,7 @@ wget $COIN_REPO
 if test -e "$COIN_ZIP"; then
     tar xvzf $COIN_ZIP
     rm -f $COIN_ZIP >/dev/null 2>&1
-    cp mero-1.2.0/bin/mero* /usr/local/bin
+    cp mero-2.0.0/bin/mero* /usr/local/bin
     cd -
     rm -rf $TMP_FOLDER >/dev/null 2>&1
     clear
